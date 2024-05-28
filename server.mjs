@@ -18,3 +18,5 @@ app.use(express.json())
 app.use('/plans', plansRouter)
 
 app.listen(3002, () => console.log('Server Started'))
+
+export default app;
