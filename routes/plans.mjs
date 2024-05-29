@@ -3,6 +3,16 @@ import Plan from "../models/plan.js";
 
 const router = express.Router();
 
+// Getting all
+router.get("/", async (req, res) => {
+  try {
+    const plans = await Plan.find();
+    res.json(plans);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
 // Getting one
 router.get("/id/:id", async (req, res) => {
   const idValue = req.params.id;
