@@ -2,7 +2,7 @@ import express from 'express';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 dotenv.config();
-import router from "../planner-backend/routes/plans.mjs"
+import plansRouter from './routes/plans.mjs';
 import cors from 'cors';
 
 const app = express();
@@ -15,7 +15,7 @@ db.once('open', () => console.log("Connected to Database"))
 
 app.use(express.json())
 
-app.use('/plans', router)
+app.use('/plans', plansRouter)
 
 app.listen(3002, () => console.log('Server Started'))
 
