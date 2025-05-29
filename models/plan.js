@@ -22,7 +22,9 @@ const planSchema = new mongoose.Schema({
         description: { type: String },
         links: { type: String },
         location: { type: String },
-        completed: { type: String, default: "No" }
+        completed: { type: String, default: "No" },
+        isGoogleCalendarEvent: { type: String, default: "No" },
+        googleCalendarId: { type: String, default: "" }
     }
 })
 

@@ -44,6 +44,8 @@ router.post("/", async (req, res) => {
       description: req.body.planData.description,
       links: req.body.planData.links,
       location: req.body.planData.location,
+      isGoogleCalendarEvent: req.body.planData.isGoogleCalendarEvent,
+      googleCalendarId: req.body.planData.googleCalendarId,
     },
   });
   try {
